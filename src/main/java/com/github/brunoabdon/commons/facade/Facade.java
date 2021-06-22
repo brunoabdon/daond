@@ -1,13 +1,12 @@
 package com.github.brunoabdon.commons.facade;
 
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.github.brunoabdon.commons.modelo.Identifiable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.github.brunoabdon.commons.modelo.Identifiable;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 /**
  * Uma facade para persistência e possíveis métodos de negócio de uma entidade.

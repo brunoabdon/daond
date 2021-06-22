@@ -1,8 +1,8 @@
 package com.github.brunoabdon.commons.facade.mappers;
 
-import java.io.Serializable;
-
 import com.github.brunoabdon.commons.modelo.Identifiable;
+
+import java.io.Serializable;
 
 /**
  * Um {@link Mapper} entre dois {@link Identifiable}s.

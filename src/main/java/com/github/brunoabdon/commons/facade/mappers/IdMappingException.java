@@ -1,8 +1,8 @@
 package com.github.brunoabdon.commons.facade.mappers;
 
-import java.io.Serializable;
-
 import com.github.brunoabdon.commons.facade.EntidadeInexistenteException;
+
+import java.io.Serializable;
 
 public class IdMappingException extends EntidadeInexistenteException {
 

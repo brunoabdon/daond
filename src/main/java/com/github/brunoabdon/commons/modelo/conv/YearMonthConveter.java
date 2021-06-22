@@ -1,12 +1,11 @@
 package com.github.brunoabdon.commons.modelo.conv;
 
-import static lombok.AccessLevel.PRIVATE;
+import lombok.NoArgsConstructor;
+import org.springframework.core.convert.converter.Converter;
 
 import java.time.YearMonth;
 
-import org.springframework.core.convert.converter.Converter;
-
-import lombok.NoArgsConstructor;
+import static lombok.AccessLevel.PRIVATE;
 
 @NoArgsConstructor(access = PRIVATE)
 public class YearMonthConveter {
