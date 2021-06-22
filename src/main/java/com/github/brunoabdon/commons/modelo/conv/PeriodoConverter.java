@@ -1,10 +1,10 @@
 package com.github.brunoabdon.commons.modelo.conv;
 
-import static java.time.LocalDate.parse;
-import static java.time.format.DateTimeFormatter.ISO_LOCAL_DATE;
-import static java.time.temporal.ChronoUnit.DAYS;
-import static lombok.AccessLevel.PRIVATE;
+import com.github.brunoabdon.commons.modelo.Periodo;
+import lombok.NoArgsConstructor;
+import org.springframework.core.convert.converter.Converter;
 
+import javax.validation.constraints.NotNull;
 import java.time.DateTimeException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -12,13 +12,10 @@ import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import javax.validation.constraints.NotNull;
-
-import org.springframework.core.convert.converter.Converter;
-
-import com.github.brunoabdon.commons.modelo.Periodo;
-
-import lombok.NoArgsConstructor;
+import static java.time.LocalDate.parse;
+import static java.time.format.DateTimeFormatter.ISO_LOCAL_DATE;
+import static java.time.temporal.ChronoUnit.DAYS;
+import static lombok.AccessLevel.PRIVATE;
 
 @NoArgsConstructor(access = PRIVATE)
 public class PeriodoConverter {

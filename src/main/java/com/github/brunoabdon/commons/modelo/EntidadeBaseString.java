@@ -17,15 +17,18 @@ package com.github.brunoabdon.commons.modelo;
  */
 
 
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
-
 import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import org.hibernate.Hibernate;
+
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
+import java.util.Objects;
+
+import static lombok.AccessLevel.PROTECTED;
 
 /**
  * Classe base pra {@link Entidade}s com {@link Entidade#getId() id} do tipo
@@ -36,9 +39,8 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-@NoArgsConstructor
-@AllArgsConstructor
-@EqualsAndHashCode(of="id")
+@NoArgsConstructor(access = PROTECTED)
+@AllArgsConstructor(access = PROTECTED)
 @MappedSuperclass
 public class EntidadeBaseString implements Entidade<String>{
 
@@ -47,4 +49,18 @@ public class EntidadeBaseString implements Entidade<String>{
 	@Id
     private String id;
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o))
+            return false;
+        EntidadeBaseString that = (EntidadeBaseString) o;
+
+        return Objects.equals(id, that.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return 1383772252;
+    }
 }
